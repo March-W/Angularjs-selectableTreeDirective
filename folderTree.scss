@@ -1,0 +1,330 @@
+.space-top.op-ipsets-bg {
+    background-image: url(/images/op-img/ip_sets_bg.png);
+}
+
+.space-top .op-ipsets-info {
+    position: absolute;
+    right: 30px;
+    top: 50px;
+    width: 380px;
+    color: #404040;
+    .info-title {
+        font-size: 24px;
+        color: #404040;
+        margin: 10px 0px;
+        font-weight: bold;
+    }
+    .intro {
+        width: 380px;
+        // height: 115px;
+        line-height: 14px;
+    }
+    .top {
+        margin-top: 20px;
+        width: 380px;
+    }
+    .add-button {
+        // width: 380;
+        padding: 10px 170px;
+        display: inline-block;
+        font-size: 14px;
+        color: #404040;
+        font-weight: bold;
+        background: #c0c0c0;
+        cursor: pointer;
+    }
+}
+
+.cleanpipe-config .space-config-box {
+    padding-top: 10px;
+    margin: 0 10px 80px;
+}
+
+.op-policy-ip-sets-item {
+    .item-header {
+        cursor: pointer;
+        background: #f8f8f8;
+        margin: 10px 10px 0;
+        .header-detail {
+            color: #404040;
+            padding-left: 12px;
+            .name {
+                font-weight: bold;
+                font-size: 14px;
+            }
+            .desc {
+                
+                font-size: 12px;
+            }
+        }
+        .header-setting {
+            visibility: hidden;
+            position: relative;
+            .icon-detail {
+                background: url(/images/op-img/icons-for-ipsets.png) no-repeat;
+                background-position: left -180px;
+                &:hover {
+                    background-position: left -200px;
+                }
+            }
+            .header-setting-icon {
+                margin: 0px 20px;
+                .profile {
+                    display: inline-block;
+                    width: 140px;
+                    height: 110px;
+                    position: absolute;
+                    right: 150px;
+                    top: 12px;
+                    padding: 5px 10px;
+                    box-sizing: border-box;
+                    background: #000000;
+                    font-size: 12px;
+                    color: #FFFFFF;
+                    z-index: 2002;
+                    h3 {
+                        font-weight: bold;
+                    }
+                    ul {
+                        padding-top: 2px;
+                        white-space: nowrap;
+                        height: 80px;
+                        overflow: auto;
+                        li {
+                            margin-top: 5px;
+                        }
+                    }
+                }
+            }
+        }
+        &:hover {
+            .header-setting {
+                visibility: unset;
+            }
+        }
+    }
+    .item-content {
+        font-size: 12px;
+        .source-ips, .source-countries {
+            width: 180px;
+            height: 200px;
+            margin: 20px 50px 12px 60px;
+            background: #FAFAFA;
+            padding: 9px 10px 0;
+        }
+        .source-ips {
+            &-header {
+                font-weight: bold;
+                color: #808080;
+                margin-bottom: 10px;
+            }
+            &-content {
+                height: 150px;
+                overflow: auto;
+                
+                color: #404040;
+                padding-left: 20px;
+                p {
+                    margin-top: 10px;
+                }
+            }
+        }
+        .source-countries {
+            &-header {
+                font-weight: bold;
+                color: #808080;
+                margin-bottom: 10px;
+            }
+            &-content {
+                height: 150px;
+                overflow: auto;
+                
+                color: #404040;
+                padding-left: 20px;
+                p {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+.op-policy-ipsets-config {
+    background: #F8F8F8;
+    margin: 10px;
+    padding: 10px 20px;
+    .config-header {
+        .header-title {
+            font-weight: bold;
+            font-size: 14px;
+            color: #404040;
+        }
+    }
+    .config-content {
+        .config-items {
+            width: 560px;
+            padding: 20px 0;
+            .config-item {
+                margin: 20px 0;
+                color: #404040;
+                md-input-container {
+                    // width: 240px;
+                    .input-name {
+                        height: 24px;
+                    }
+                    .input-textarea-desc {
+                        height: 24px;
+                        overflow: auto;
+                    }
+                    .input-textarea-ips {
+                        height: 120px;
+                        overflow: auto;
+                    }
+                }
+                md-checkbox {
+                    .md-container {
+                        width: 12px;
+                        height: 12px;
+                        .md-icon {
+                            width: 12px;
+                            height: 12px;
+                            border: 1px solid #C0C0C0;
+                        }
+                    }
+                }
+                md-checkbox.md-checked {
+                    .md-container {
+                        .md-icon {
+                            background: #E15829;
+                            border-color: #E15829;
+                            &:after {
+                                border-color: #FFFFFF;
+                                top:0;
+                                left:4px;
+                                width: 5px;
+                                height: 9px;
+                                border-width: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+            .error-message {
+                color: #f44b00;
+                font-size: 12px;
+            }
+        }
+    }
+}
+.error-message {
+    color: #f44b00;
+    font-size: 12px;
+}
+
+.ipsets-source-countries {
+    position: relative;
+    background: #FFFFFF;
+    border: 1px solid #C0C0C0;
+    border-radius: 2px;
+    height: 24px;
+    line-height: 24px;
+    cursor:pointer;
+    padding: 0 10px;
+    .select-options {
+        color: #C0C0C0;
+    }
+    .change-color {
+        color: #404040;
+    }
+    &-list {
+        position: absolute;
+        top:24px;
+        right:10px;
+        width: 200px;
+        height: 240px;
+        background: #FFFFFF;
+        box-shadow: 0 0 6px 0 rgba(0,0,0,0.20);
+        border-radius: 4px;
+        z-index:2002;
+        &-header {
+            border-bottom: 1px solid #F6F6F6;
+            padding: 9px 5px 0;
+            .header-search {
+                width: 180px;
+                height: 24px;
+                background: #F6F6F6;
+                border-radius: 12px;
+                .header-searchbox {
+                    background: #F6F6F6;
+                    border-radius: 12px;
+                    outline:none;
+                    border: none;
+                    height: 24px;
+                    font-size: 12px;
+                    color: #C0C0C0;
+                    padding-left: 8px;
+                }
+                .header-searchicon {
+                    background: url(/images/op-img/icons-for-ipsets.png) no-repeat;
+                    background-position: left -340px;
+                }
+            }
+            .header-selectall {
+                font-weight: bold;
+                font-size: 12px;
+                color: #404040;
+            }
+        }
+        &-content {
+            height: 160px;
+            overflow: auto;
+            p {
+                min-height: 14px;
+                line-height: 14px;
+                padding: 0 6px;
+            }
+        }
+        .loading-country-img {
+            height: 24px;
+            width: 24px;
+            position: absolute;
+            top: 110px;
+            left: 85px;
+        }
+        md-checkbox {
+            .md-container {
+                width: 12px;
+                height: 12px;
+                .md-icon {
+                    width: 12px;
+                    height: 12px;
+                    border: 1px solid #C0C0C0;
+                }
+            }
+        }
+        md-checkbox.md-checked {
+            .md-container {
+                .md-icon {
+                    background: #E15829;
+                    border-color: #E15829;
+                    &:after {
+                        border-color: #FFFFFF;
+                        top:0;
+                        left:4px;
+                        width: 5px;
+                        height: 9px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// .ipsetsSelectHeader {
+//     background: #FFFFFF;
+//     border: 1px solid #C0C0C0;
+//     border-radius: 2px;
+//     .ipsets-select-header {
+//         margin: 10px;
+//     }
+// }

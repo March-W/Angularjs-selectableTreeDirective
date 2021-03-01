@@ -1,0 +1,62 @@
+<div
+    class="ipsets-source-countries"
+    layout="row"
+    layout-align="space-between center"
+    ng-click="vm.onShowCountriesClick($event)"
+>
+    <span
+        class="select-options"
+        ng-class="{'change-color': vm.editIPSetsTreeData.length > 0}"
+    >
+        {{'Select \{\{1\}\} options'|lg: vm.editIPSetsTreeData.length}}
+    </span>
+    <span class="icon-country-up"></span>
+    <div class="ipsets-source-countries-list" ng-show="vm.showCountries">
+        <!-- header -->
+        <div class="ipsets-source-countries-list-header" layout="column" layout-align="start start">
+            <div class="header-search" layout="row" layout-align="space-around center">
+                <input
+                    ng-model="vm.searchField"
+                    ng-click="vm.onInputClick($event)"
+                    type="search"
+                    placeholder="Search"
+                    class="header-searchbox md-text"
+                    aria-label="Search through Source Countries"
+                >
+                    <md-icon
+                        class="header-searchicon cursor-pointer"
+                        ng-click="vm.searchCountry()"
+                    ></md-icon>
+                    </div>
+            <div class="header-selectall" ng-click="vm.onCountrySelectAllClick($event);">
+                <md-checkbox
+                    aria-label="Select ALL"
+                    class="md-primary"
+                    ng-checked="vm.sourceCountryCount == vm.editIPSetsTreeData.length"
+                >
+                    {{'Select ALL'|lg}}
+                </md-checkbox>
+            </div>
+        </div>
+        <!-- content -->
+        <div class="ipsets-source-countries-list-content">
+            <p
+                ng-repeat="(key, country) in vm.ipsetsTreeData | country_filter: vm.searchField"
+                ng-click="vm.onCountryItemClick(key, $event);"
+            >
+            <md-checkbox
+                aria-label="select country"
+                class="md-primary"
+                ng-checked="vm.editIPSetsTreeData.indexOf(key) > -1"
+            >
+                {{ country }}
+            </md-checkbox>
+            </p>
+        </div>
+        <img
+            ng-if="vm.loadingCountry"
+            src="/images/img/loading.gif"
+            class="loading-country-img"
+        />
+    </div>
+</div>
